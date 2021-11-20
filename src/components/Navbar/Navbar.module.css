@@ -1,0 +1,22 @@
+.nav {
+	grid-area: nav;
+	background-color: aquamarine;
+}
+.nav ul {
+	padding-left: 15%;
+}
+.nav li {
+	list-style-type: none;
+	margin: 20px 0;
+}
+.item {
+	padding: 5px 10px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+.active {
+	color: coral;
+}
+li:hover {
+	color: coral;
+}
