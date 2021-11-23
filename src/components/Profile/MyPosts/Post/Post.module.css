@@ -1,6 +1,13 @@
 .item {
 	color: darkgreen;
 }
+.post {
+	display: flex;
+	align-items: center;
+}
+.postMessage {
+	margin-left: 20px;
+}
 .item img {
 	width: 50px;
 	border-radius: 50%;

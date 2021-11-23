@@ -1,1 +1,10 @@
-
+.content {
+	padding: 20px 100px;
+}
+.newPost {
+	display: flex;
+	margin-bottom: 30px;
+}
+.newPost button {
+	margin-left: 10px;
+}

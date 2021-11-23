@@ -5,14 +5,15 @@ const MyPosts = () => {
 	return (
 		<div className={s.content}>
 			<div>
-				My posts
-				<div>
+				<h3>My posts</h3>
+
+				<div className={s.newPost}>
 					<textarea></textarea>
 					<button>Add post</button>
 				</div>
+
 				<Post message='Hi, how are you?' likeCount='15' />
 				<Post message='This is my first post' likeCount='20' />
-				<Post />
 			</div>
 		</div>
 	)
