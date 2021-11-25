@@ -1,5 +1,6 @@
 import s from './Post.module.css';
 import ava from '../../../../images/avatar.jpg';
+
 const Post = (props) => {
 	return (
 		<div className={s.item}>
