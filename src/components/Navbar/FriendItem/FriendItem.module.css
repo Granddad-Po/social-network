@@ -1,0 +1,15 @@
+.friendItem {
+    display: flex;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ava {
+    width: 30px;
+    border-radius: 50%;
+}
+.name {
+
+}

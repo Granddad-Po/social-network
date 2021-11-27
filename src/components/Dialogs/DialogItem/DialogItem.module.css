@@ -1,0 +1,20 @@
+.dialogsItem {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+.avatar {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.dialogs {
+    color: black;
+    text-decoration: none;
+}
+.dialogsItem .active {
+    color: coral;
+    text-decoration: none;
+}
