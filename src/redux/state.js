@@ -4,7 +4,9 @@ import avaVlad from '../images/avaVlad.JPG';
 import avaLana from '../images/avaLana.jpg';
 import avaArthur from '../images/avaArthur.jpg';
 import avaDaria from '../images/avaDaria.png';
-import {rerenderEntireTree} from "../render";
+
+let rerenderEntireTree = () => {
+}
 
 let state = {
 
@@ -41,7 +43,7 @@ let state = {
     }
 }
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 5,
         message: state.profilePage.newPostText,
@@ -53,12 +55,12 @@ export let addPost = () => {
     rerenderEntireTree(state);
 }
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
     rerenderEntireTree(state);
 }
 
-export let addMessage = () => {
+export const addMessage = () => {
     let newMessage = {
         id: 5,
         message: state.messagesPage.newMessageText,
@@ -69,9 +71,13 @@ export let addMessage = () => {
     rerenderEntireTree(state);
 }
 
-export let updateNewMessageText = (newText) => {
+export const updateNewMessageText = (newText) => {
     state.messagesPage.newMessageText = newText;
     rerenderEntireTree(state);
+}
+
+export const subscribe = (observer) => {
+	rerenderEntireTree = observer;
 }
 
 export default state;
