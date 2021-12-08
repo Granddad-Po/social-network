@@ -5,7 +5,7 @@ import React from "react";
 
 
 const Dialogs = (props) => {
-
+	debugger;
 	let dialogsElements = props.messagesPage.dialogs.map( dialog => <DialogItem name={dialog.name} id={dialog.id} ava={dialog.ava} /> );
 	let messagesElements = props.messagesPage.messages.map( message => <Message message={message.message} /> );
 
