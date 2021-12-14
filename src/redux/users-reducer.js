@@ -1,8 +1,3 @@
-import avaVit from '../images/avatar.jpg'
-import avaTim from '../images/avaTim.JPG'
-import avaVlad from '../images/avaVlad.JPG'
-import avaLana from '../images/avaLana.jpg'
-
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET_USERS';
