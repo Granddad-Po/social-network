@@ -6,20 +6,19 @@ import userPhoto from '../../images/user.png';
 
 class Users extends React.Component {
 
-    constructor(props) {
-        super(props);
+    componentDidMount() {
         axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
             this.props.setUsers(response.data.items);
         })
     }
 
-    render () {
-        return <div>
+    render() {
+        return <div className={s.usersPage}>
             {
                 this.props.users.map(u => <div key={u.id}>
             <span>
                 <div>
-                    <img className={s.ava} src={ u.photos.small != null ? u.photos.small : userPhoto} alt='avatar'/>
+                    <img className={s.ava} src={u.photos.small != null ? u.photos.small : userPhoto} alt='avatar'/>
                 </div>
                 <div>
                     {u.followed ?
@@ -30,7 +29,7 @@ class Users extends React.Component {
             </span>
                     <span>
                     <span>
-                        <div>{u.name}</div>
+                        <div className={s.name}>{u.name}</div>
                         <div>{u.status}</div>
                     </span>
                     <span>
