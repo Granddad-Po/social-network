@@ -16,3 +16,10 @@
     font-weight: bold;
     margin: 10px 0;
 }
+.pageNumber {
+    margin: 0 5px;
+}
+.selectedPage {
+    margin: 0 5px;
+    font-weight: bold;
+}
