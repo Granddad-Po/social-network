@@ -5,3 +5,10 @@
 .img {
 	height: 50px;
 }
+.loginBlock {
+	float: right;
+}
+.loginBlock a {
+	color: white;
+	text-decoration: none;
+}

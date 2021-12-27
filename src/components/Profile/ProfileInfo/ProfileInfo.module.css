@@ -5,10 +5,15 @@
 	width: 200px;
 	height: 200px;
 }
+.userName {
+	font-weight: bold;
+	font-size: 30px;
+	margin-left: 50px;
+}
 .description {
 	margin-left: 20px;
 }
-.aboutMe {
+.about {
 	display: flex;
 	align-items: center;
 	padding: 20px 100px;
