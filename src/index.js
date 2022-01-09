@@ -8,7 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 import {Provider} from "react-redux";
 
 	ReactDOM.render(
-		 <React.StrictMode> {/*ВЕРНУТЬ, ПОСЛЕ ВЫНОСА МАССИВА ЮЗЕРОВ ИЗ КОМПОНЕНТЫ !!!*/}
+		 <React.StrictMode>
 			<BrowserRouter>
 				<Provider store={store}>
 					<App />
