@@ -16,12 +16,6 @@ export const usersAPI = {
                 return response.data;
             });
     },
-    getProfiles(userId = 21336,) {
-        return instance.get(`profile/${userId}`)
-            .then(response => {
-                return response.data;
-            });
-    },
     follow(userId) {
         return instance.post(`follow/${userId}`)
             .then(response => response.data);
@@ -29,6 +23,21 @@ export const usersAPI = {
     unfollow(userId) {
         return instance.delete(`follow/${userId}`)
             .then(response => response.data);
+    }
+}
+
+export const profileAPI = {
+    getProfiles(userId = 21336,) {
+        return instance.get(`profile/${userId}`)
+            .then(response => {
+                return response.data;
+            });
+    },
+    getStatus(userId) {
+        return instance.get(`profile/status/${userId}`)
+    },
+    updateStatus(status) {
+        return instance.put(`profile/status`, { status })
     }
 }
 
