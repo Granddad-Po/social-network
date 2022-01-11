@@ -6,7 +6,6 @@ import avaArthur from "../images/avaArthur.jpg";
 import avaDaria from "../images/avaDaria.png";
 
 const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
 let initialState = {
     dialogs: [
@@ -23,7 +22,6 @@ let initialState = {
         {id: 3, message: 'Hello. Im fine. Thanks.'},
         {id: 4, message: 'And you?'}
     ],
-    newMessageText: ''
 };
 
 const dialogsReducer = (state = initialState, action) => {
@@ -32,22 +30,14 @@ const dialogsReducer = (state = initialState, action) => {
         case 'ADD-MESSAGE': {
             return {
                 ...state,
-                messages: [...state.messages, {id: 5, message: state.newMessageText}],
-                newMessageText: ''
+                messages: [...state.messages, {id: 5, message: action.newMessageBody}],
             };
-        }
-        case 'UPDATE-NEW-MESSAGE-TEXT': {
-            return {
-                ...state,
-                newMessageText: action.newText
-            }
         }
         default:
             return state;
     }
 }
 
-export const addMessageActionCreator = () => ({type: ADD_MESSAGE});
-export const updateNewMessageTextActionCreator = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, newText: text});
+export const addMessageActionCreator = (newMessageBody) => ({type: ADD_MESSAGE, newMessageBody});
 
 export default dialogsReducer;
