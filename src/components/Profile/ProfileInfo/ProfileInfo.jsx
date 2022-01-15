@@ -1,7 +1,7 @@
 import s from './ProfileInfo.module.css';
 import user from '../../../images/user.png';
 import Preloader from "../../common/Preloader";
-import ProfileStatus from "./ProfileStatus";
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -14,7 +14,7 @@ const ProfileInfo = (props) => {
             {/*     src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg'/>*/}
             <div className={s.about}>
                 <img className={s.ava} src={props.profile.photos.large ? props.profile.photos.large : user}/>
-                <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
                 <div className={s.userName}>{props.profile.fullName}</div>
                 <div className={s.description}>{props.profile.aboutMe}</div>
             </div>
