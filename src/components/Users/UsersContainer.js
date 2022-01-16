@@ -7,7 +7,7 @@ import {
 } from "../../redux/users-reducer";
 import React from "react";
 import Users from "./Users";
-import Preloader from "../common/Preloader";
+import Preloader from "../common/Preloader/Preloader";
 import {
     getCurrentPage,
     getFollowingInProgress,
@@ -19,20 +19,13 @@ import {
 
 class UsersContainer extends React.Component {
     componentDidMount() {
-        this.props.getUsers(this.props.currentPage, this.props.pageSize);
+        let {currentPage, pageSize} = this.props;
+        this.props.getUsers(currentPage, pageSize);
     }
 
     onPageChanged = (pageNumber) => {
-        this.props.getUsers(pageNumber, this.props.pageSize);
-
-        // There need refact setCurrentPage!!!
-
-        /*this.props.setCurrentPage(pageNumber);
-        this.props.toggleIsFetching(true);
-        usersAPI.getUsers(pageNumber, this.props.pageSize).then(data => {
-            this.props.toggleIsFetching(false);
-            this.props.setUsers(data.items);
-        })*/
+        let {pageSize} = this.props;
+        this.props.getUsers(pageNumber, pageSize);
     }
 
     render() {

@@ -39,7 +39,7 @@ const profileReducer = (state = initialState, action) => {
         case DELETE_POST: {
             return {
                 ...state,
-                posts: state.posts.filter( p => p.id != action.postId)
+                posts: state.posts.filter(p => p.id != action.postId)
             }
         }
         default:
@@ -53,26 +53,23 @@ export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 export const setStatus = (status) => ({type: SET_STATUS, status});
 
 export const getProfile = (userId) => {
-    return (dispatch) => {
-        profileAPI.getProfiles(userId).then(data => {
-            dispatch(setUserProfile(data));
-        })
+    return async (dispatch) => {
+        let response = await profileAPI.getProfiles(userId);
+        dispatch(setUserProfile(response));
     }
 }
 export const getStatus = (userId) => {
-    return (dispatch) => {
-        profileAPI.getStatus(userId).then(response => {
-            dispatch(setStatus(response.data));
-        })
+    return async (dispatch) => {
+        let response = await profileAPI.getStatus(userId);
+        dispatch(setStatus(response.data));
     }
 }
 export const updateStatus = (status) => {
-    return (dispatch) => {
-        profileAPI.updateStatus(status).then(response => {
-            if (response.data.resultCode === 0) {
-                dispatch(setStatus(status));
-            }
-        })
+    return async (dispatch) => {
+        let response = await profileAPI.updateStatus(status);
+        if (response.data.resultCode === 0) {
+            dispatch(setStatus(status));
+        }
     }
 }
 

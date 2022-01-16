@@ -3,7 +3,7 @@ import Post from './Post/Post';
 import React from "react";
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required} from "../../../utils/validators";
-import {Textarea} from "../../common/FormsControl";
+import {Textarea} from "../../common/FormsControl/FormsControl";
 
 
 const MyPosts = React.memo(props => {

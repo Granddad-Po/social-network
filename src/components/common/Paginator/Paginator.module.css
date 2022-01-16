@@ -1,0 +1,9 @@
+.pageNumber {
+    cursor: pointer;
+    margin: 0 5px;
+}
+.selectedPage {
+    cursor: pointer;
+    margin: 0 5px;
+    font-weight: bold;
+}
