@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/social-network/static/css/main.0b41cbfa.chunk.css",
+    "main.js": "/social-network/static/js/main.36e76e52.chunk.js",
+    "main.js.map": "/social-network/static/js/main.36e76e52.chunk.js.map",
+    "runtime-main.js": "/social-network/static/js/runtime-main.5735a644.js",
+    "runtime-main.js.map": "/social-network/static/js/runtime-main.5735a644.js.map",
+    "static/js/2.4d270110.chunk.js": "/social-network/static/js/2.4d270110.chunk.js",
+    "static/js/2.4d270110.chunk.js.map": "/social-network/static/js/2.4d270110.chunk.js.map",
+    "static/css/3.9af3258a.chunk.css": "/social-network/static/css/3.9af3258a.chunk.css",
+    "static/js/3.ce9417ad.chunk.js": "/social-network/static/js/3.ce9417ad.chunk.js",
+    "static/js/3.ce9417ad.chunk.js.map": "/social-network/static/js/3.ce9417ad.chunk.js.map",
+    "static/js/4.132e2724.chunk.js": "/social-network/static/js/4.132e2724.chunk.js",
+    "static/js/4.132e2724.chunk.js.map": "/social-network/static/js/4.132e2724.chunk.js.map",
+    "index.html": "/social-network/index.html",
+    "static/css/3.9af3258a.chunk.css.map": "/social-network/static/css/3.9af3258a.chunk.css.map",
+    "static/css/main.0b41cbfa.chunk.css.map": "/social-network/static/css/main.0b41cbfa.chunk.css.map",
+    "static/js/2.4d270110.chunk.js.LICENSE.txt": "/social-network/static/js/2.4d270110.chunk.js.LICENSE.txt",
+    "static/media/avaArthur.39d02063.jpg": "/social-network/static/media/avaArthur.39d02063.jpg",
+    "static/media/avaDaria.2e4ef16d.png": "/social-network/static/media/avaDaria.2e4ef16d.png",
+    "static/media/avaLana.44443c1a.jpg": "/social-network/static/media/avaLana.44443c1a.jpg",
+    "static/media/avaTim.JPG": "/social-network/static/media/avaTim.2a7b2e66.JPG",
+    "static/media/avaVlad.JPG": "/social-network/static/media/avaVlad.3ac86c47.JPG",
+    "static/media/avatar.jpg": "/social-network/static/media/avatar.0f29d0bc.jpg",
+    "static/media/logo.4c8bca54.png": "/social-network/static/media/logo.4c8bca54.png",
+    "static/media/preloader.476385ab.svg": "/social-network/static/media/preloader.476385ab.svg",
+    "static/media/user.a39e1bc0.png": "/social-network/static/media/user.a39e1bc0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5735a644.js",
+    "static/js/2.4d270110.chunk.js",
+    "static/css/main.0b41cbfa.chunk.css",
+    "static/js/main.36e76e52.chunk.js"
+  ]
+}
