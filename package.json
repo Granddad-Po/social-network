@@ -1,7 +1,7 @@
 {
 	"name": "path_samurai",
 	"version": "0.1.0",
-	"homepage": "https://Granddad-Po.github.io/social-network",
+	/*"homepage": "https://Granddad-Po.github.io/social-network",*/
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.15.0",

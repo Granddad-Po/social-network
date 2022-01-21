@@ -1,3 +1,6 @@
+.about {
+	margin: 20px 100px;
+}
 .img {
 	width: 100%;
 }
@@ -8,13 +11,7 @@
 .userName {
 	font-weight: bold;
 	font-size: 30px;
-	margin-left: 50px;
 }
-.description {
-	margin-left: 20px;
-}
-.about {
-	display: flex;
-	align-items: center;
-	padding: 20px 100px;
+.contact {
+	padding-left: 15px;
 }
