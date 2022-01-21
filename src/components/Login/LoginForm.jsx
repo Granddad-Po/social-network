@@ -22,6 +22,6 @@ const LoginForm = ({handleSubmit, error}) => {
     )
 }
 
-const LoginReduxForm = reduxForm({form: 'login'})(LoginForm)
+const LoginReduxForm = reduxForm({form: 'login'})(LoginForm);
 
 export default LoginReduxForm;
