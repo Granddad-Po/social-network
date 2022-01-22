@@ -5,7 +5,7 @@ import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import React, {useState} from "react";
 import ProfileDataReduxForm from "./ProfileDataForm";
 
-const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
+const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, saveProfile}) => {
 
     let [editMode, setEditMode] = useState(false);
 
@@ -13,6 +13,12 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
         if (e.target.files.length) {
             savePhoto(e.target.files[0]);
         }
+    }
+
+    const onSubmit = (formData) => {
+        saveProfile(formData).then(() => {
+            setEditMode(false);
+        });
     }
 
     if (!profile) {
@@ -27,7 +33,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
 
                 <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
                 {editMode
-                    ? <ProfileDataReduxForm profile={profile}/>
+                    ? <ProfileDataReduxForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
                     : <ProfileData profile={profile}
                                    isOwner={isOwner}
                                    goToEditMode={() => {setEditMode(true)}}/>
@@ -50,9 +56,10 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
                 <b>About me: </b>{profile.aboutMe}
             </div>
             <div>
-                <b>Looking for a job: </b>{profile.lookingForAJob ? 'Уже работаю' : 'В поиске работы'}
+                <b>Looking for a job: </b>{profile.lookingForAJob ? 'В поиске работы' : 'Уже работаю'}
             </div>
             <div>
+                <b>Skills: </b>
                 {profile.lookingForAJob && profile.lookingForAJobDescription}
             </div>
             <div>
