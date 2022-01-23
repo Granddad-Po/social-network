@@ -3,7 +3,7 @@ import {createField, Input} from "../common/FormsControl/FormsControl";
 import {required} from "../../utils/validators";
 import styles from '../common/FormsControl/FormsControl.module.css';
 
-const LoginForm = ({handleSubmit, error}) => {
+const LoginForm = ({handleSubmit, error, captchaUrl}) => {
 
     return (
         <form onSubmit={handleSubmit}>
@@ -14,6 +14,10 @@ const LoginForm = ({handleSubmit, error}) => {
 
             {error && <div className={styles.formSummaryError}>
                 {error}
+            </div>}
+            {captchaUrl && <div>
+                <img src={captchaUrl}/>
+                {createField('Captcha', 'captcha', Input, [required])}
             </div>}
             <div>
                 <button>Log In</button>
