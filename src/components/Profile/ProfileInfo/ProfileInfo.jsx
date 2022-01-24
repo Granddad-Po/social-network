@@ -56,7 +56,7 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
                 <b>About me: </b>{profile.aboutMe}
             </div>
             <div>
-                <b>Looking for a job: </b>{profile.lookingForAJob ? 'В поиске работы' : 'Уже работаю'}
+                <b>Looking for a job: </b>{profile.lookingForAJob ? 'Уже работаю' : 'В поиске работы'}
             </div>
             <div>
                 <b>Skills: </b>
