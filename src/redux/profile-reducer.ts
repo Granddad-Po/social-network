@@ -7,16 +7,47 @@ const SET_STATUS = 'SET_STATUS';
 const DELETE_POST = 'DELETE_POST';
 const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS';
 
+type PostType = {
+    id: number,
+    message: string,
+    likesCount: number
+}
+type ContactsType = {
+    github: string | null,
+    vk: string | null,
+    facebook: string | null,
+    instagram: string | null,
+    twitter: string | null,
+    website: string | null,
+    youtube: string | null,
+    mainLink: string | null,
+}
+type PhotosType = {
+    small: string | null,
+    large: string | null
+}
+type ProfileType = {
+    userId?: number
+    aboutMe?: string | null
+    lookingForAJob: boolean
+    lookingForAJobDescription: string | null
+    fullName: string | null
+    contacts: ContactsType
+    photos: PhotosType
+
+}
+
 let initialState = {
     posts: [
         {id: 1, message: 'Hi, how are you?', likesCount: 25},
         {id: 2, message: 'This is my first post', likesCount: 20}
-    ],
-    profile: null,
+    ] as Array<PostType>,
+    profile: null as ProfileType | null,
     status: ""
 };
+export type InitialStateType = typeof initialState;
 
-const profileReducer = (state = initialState, action) => {
+const profileReducer = (state = initialState, action: any): InitialStateType => {
 
     switch (action.type) {
         case ADD_POST: {
