@@ -27,7 +27,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
 
     return (
         <div className={s.about}>
-            <img className={s.ava} src={profile.photos.large ? profile.photos.large : user}/>
+            <img className={s.ava} alt={'user avatar'} src={profile.photos.large ? profile.photos.large : user}/>
             <div>
                 {isOwner && <input type={'file'} onChange={onAvatarSelected}/>}
 
